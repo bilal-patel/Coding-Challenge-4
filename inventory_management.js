@@ -11,4 +11,16 @@ let inventory = [
 //console.log (inventory)
 
 
+// Task 2: Create a Function to Display Product Details
+function displayProductDetails(product) {
+    // output and log product and corresponding name/number
+    console.log(`Product Name: ${product.name}`);
+    console.log(`Product Price: $${product.price}`);
+    console.log(`Product Quantity: ${product.quantity}`);
+//checking status of stock using ternarary
+    let stockStatus = product.quantity > product.lowStockLevel ? "In Stock" : "Low Stock";
+    console.log(`Stock Status: ${stockStatus}`);
+}
+inventory.forEach (displayProductDetails);
+
 
