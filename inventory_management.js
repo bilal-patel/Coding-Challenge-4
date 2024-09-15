@@ -38,6 +38,12 @@ console.log("Product is Out of Stock"); // check if stocks is low or out
 
 updateStock(apple, 15);
 
+//Task 4 - Create a Function to Check Low Stock Products
 
+function checkLowStock (inventory) {
+for (let product of inventory) {
+    if (product.quantity <= product.lowStockLevel)
+        console.log(`Low stock for the following: ${product.name}`);
+}}
 
-
+// checkLowStock(inventory);
