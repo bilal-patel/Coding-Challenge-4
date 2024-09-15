@@ -39,3 +39,5 @@ console.log("Product is Out of Stock"); // check if stocks is low or out
 updateStock(apple, 15);
 
 
+
+
