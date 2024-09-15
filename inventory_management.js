@@ -47,3 +47,17 @@ for (let product of inventory) {
 }}
 
 // checkLowStock(inventory);
+
+//Task 5 - Create a Function to Calculate Total Inventory Value
+
+function calculateInventoryValue (inventory) {
+    let totalValue = 0; 
+    for (let i = 0; i < inventory.length; i++) {
+        let product = inventory[i];
+        totalValue += product.price * product.quantity;
+    }
+    return totalValue;
+}
+const totalValue = calculateInventoryValue(inventory)
+
+console.log("Total Inventory Value: $" + totalValue);
