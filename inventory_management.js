@@ -52,12 +52,29 @@ for (let product of inventory) {
 
 function calculateInventoryValue (inventory) {
     let totalValue = 0; 
-    for (let i = 0; i < inventory.length; i++) {
+    for (let i = 0; i < inventory.length; i++) { //use for loop to itterate
         let product = inventory[i];
-        totalValue += product.price * product.quantity;
+        totalValue += product.price * product.quantity; //calc total value
     }
     return totalValue;
 }
 const totalValue = calculateInventoryValue(inventory)
 
-console.log("Total Inventory Value: $" + totalValue);
+console.log("Total Inventory Value: $" + totalValue); //provide total
+
+//Task 6 - Create a function to process a sale
+
+function processSale(productName, unitsSold) {
+const product = inventory.find(item => item.name === productName); // finding product in inventory
+
+if (product) { // checking for the product
+if (product.quantity >= unitsSold) {
+product.quantity -= unitsSold; //reduce quantity of product
+} else {
+    console.log(`${productName} has no stock`);
+}
+} else {console.log (`${productName} not in inventory`);}
+}
+
+processSale ('mango', 10);
+
